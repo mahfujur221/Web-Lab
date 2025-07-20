@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #d9d8d5 0%, #323548 100%);
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+}
+header {
+  text-align: center;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2d3436;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: #ffffffcc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ffeaa7;
+  transform: translateY(-3px);
+}
+
+
+h2 {
+  font-size: 2rem;
+  color: #2d3436;
+  margin-bottom: 20px;
+}
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.recipe-card {
+  background-color: #ffffffdd;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.recipe-card h3 {
+  font-size: 1.5rem;
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.recipe-card ul {
+  list-style: square;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.recipe-card button {
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.recipe-card button:hover {
+  background-color: #e67e22;
+}
+
+#mealForm {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  max-width: 1280px;
+  margin-bottom: 30px;
+}
+
+#mealForm input,
+#mealForm select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 10px 10px 10px 0;
+  width: calc(100% - 20px);
+  max-width: 300px;
+}
+
+#mealForm label {
+  margin: 0 10px 10px 0;
+  display: inline-block;
+  font-weight: 500;
+}
+
+#mealForm button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#mealForm button:hover {
+  background-color: #1e8449;
+}
+
+#error {
+  color: red;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#mealTable {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 700px;
+  margin-top: 10px;
+}
+
+#mealTable th, #mealTable td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+
+#mealTable th {
+  background-color: #ffeaa7;
+  color: #2d3436;
+  font-weight: 600;
+}
+
+#tipBtn {
+  background-color: #0984e3;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+#tipBtn:hover {
+  background-color: #0073d3;
+}
+
+#tipBox {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f0fff0;
+  border-left: 6px solid #27ae60;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  max-width: 700px;
+}
+
+#links ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  font-size: 1.1rem;
+}
+
+#links a {
+  color: #d35400;
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+#links a:hover {
+  color: #e67e22;
+}

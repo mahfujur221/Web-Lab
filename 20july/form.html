@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DIU Form</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<div class="shooting-stars"></div>
+
+<body class="light">
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider round"></span>
+    </label>
+    <span class="toggle-label">Dark Mode</span>
+  </div>
+
+  <div class="container">
+    <h2>DIU Student Form</h2>
+    <form id="diuForm">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="studentId">ID:</label>
+      <input type="text" id="studentId" name="studentId" required>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <button type="submit">Submit</button>
+      <p id="message"></p>
+    </form>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

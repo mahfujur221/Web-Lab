@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Meal Planner</title>
+  <link rel="stylesheet" href="meal.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>My Meal Planner</h1>
+    <p id="greeting"></p>
+    <p id="date"></p>
+  </header>
+
+  <nav>
+    <a href="#recipes">Recipes</a>
+    <a href="#planner">Meal Planner</a>
+    <a href="#links">Useful Links</a>
+  </nav>
+
+  
+  <section id="recipes">
+    <h2>Recipe Catalog</h2>
+    <div class="recipe-grid">
+
+      
+      <div class="recipe-card">
+        <img src="https://imgs.search.brave.com/kxcbeCz0niNaczKymtefhhB2eIAv4Mp9m5-0ekD0nCA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXRlLnZpc3Rh/LmNvbS9hcGkvbWVk/aWEvc21hbGwvMjM4/MzgxNjMwL3N0b2Nr/LXBob3RvLWdyaWxs/ZWQtY2hlZXNlLXNh/bmR3aWNoLXdvb2Rl/bi10YWJsZS1jbG9z/ZQ" alt="Grilled Sandwich" />
+        <h3>Grilled Sandwich</h3>
+        <ul>
+          <li>Bread</li>
+          <li>Cheese</li>
+          <li>Butter</li>
+        </ul>
+        <button onclick="toggleInstructions(this)">Show Steps</button>
+        <p class="instructions" style="display:none;">
+          1. Butter the bread.<br>
+          2. Add cheese between slices.<br>
+          3. Grill until golden brown.
+        </p>
+      </div>
+
+    
+      <div class="recipe-card">
+        <img src="https://imgs.search.brave.com/m-WWv31JDlHFQUMJS2WhMF17FR6x83mYIwam09f_z_Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDcv/MzgwLzY1NS9zbWFs/bC9pbmR1bGdlLWlu/LWEtcGxhdGUtb2Yt/bW91dGh3YXRlcmlu/Zy1mZXR0dWNjaW5l/LWFsZnJlZG8tcGFz/dGEtdG9wcGVkLXdp/dGgtZ3JpbGxlZC1j/aGlja2VuLXBob3Rv/LmpwZw" alt="Pasta Alfredo" />
+        <h3>Pasta Alfredo</h3>
+        <ul>
+          <li>Pasta</li>
+          <li>Cream</li>
+          <li>Garlic</li>
+          <li>Parmesan</li>
+        </ul>
+        <button onclick="toggleInstructions(this)">Show Steps</button>
+        <p class="instructions" style="display:none;">
+          1. Boil pasta and drain.<br>
+          2. Sauté garlic in butter.<br>
+          3. Add cream and cheese.<br>
+          4. Combine with pasta and serve hot.
+        </p>
+      </div>
+
+      
+      <div class="recipe-card">
+        <img src="https://imgs.search.brave.com/lrrbm4Gc2VH5Jf6P0DUoQkUarQTRatkZhYk1ECDOJBA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmVhc3RpbmdhdGhv/bWUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIxLzAzL3Zl/Z2V0YWJsZS1mcmll/ZC1yaWNlXy0xOS5q/cGc" alt="Vegetable Fried Rice" />
+        <h3>Vegetable Fried Rice</h3>
+        <ul>
+          <li>Cooked Rice</li>
+          <li>Carrots</li>
+          <li>Green Peas</li>
+          <li>Soy Sauce</li>
+        </ul>
+        <button onclick="toggleInstructions(this)">Show Steps</button>
+        <p class="instructions" style="display:none;">
+          1. Sauté vegetables in oil.<br>
+          2. Add rice and soy sauce.<br>
+          3. Stir-fry everything for 3–4 minutes.<br>
+          4. Serve warm.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section id="planner">
+    <h2>Meal Planner</h2>
+    <form id="mealForm">
+      <input type="text" id="mealName" placeholder="Meal Name" />
+      <select id="day">
+        <option value="">Select Day</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+      </select>
+      <label><input type="checkbox" value="Breakfast" name="type" /> Breakfast</label>
+      <label><input type="checkbox" value="Lunch" name="type" /> Lunch</label>
+      <label><input type="checkbox" value="Dinner" name="type" /> Dinner</label>
+      <button type="submit">Add Meal</button>
+      <div id="error"></div>
+    </form>
+    <table id="mealTable" border="1">
+      <thead>
+        <tr><th>Day</th><th>Meals</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  
+  <section>
+    <button id="tipBtn">Cooking Tip of the Day</button>
+    <div id="tipBox"></div>
+  </section>
+
+
+  <section id="links">
+    <h2>Useful Links</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Watch Cooking Tips</a></li>
+      <li>Find recipes on <a href="https://www.allrecipes.com" target="_blank">AllRecipes</a></li>
+      <li>Read about healthy diets <a href="https://healthline.com" target="_blank">here</a>.</li>
+    </ul>
+  </section>
+
+  <script src="meal.js"></script>
+</body>
+</html>
